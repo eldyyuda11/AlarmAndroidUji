@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DOKUMEN-2021-januari-april/KULIAH/TA Android/Android Tes/AlarmAndroidUji/app/src/main/res/drawable-v24/ic_access_time_black.xml" value="0.1045" />
+        <entry key="..\:/DOKUMEN-2021-januari-april/KULIAH/TA Android/Android Tes/AlarmAndroidUji/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Jetpack-Compose-AlarmManager-with-Notification-main/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>

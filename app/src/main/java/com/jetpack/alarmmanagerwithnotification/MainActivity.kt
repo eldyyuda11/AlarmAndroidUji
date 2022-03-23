@@ -9,18 +9,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.jetpack.alarmmanagerwithnotification.ui.theme.AlarmManagerWithNotificationTheme
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,14 +20,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 const val BASE_URL = "https://tesapp123.herokuapp.com/"
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var alarmReceiver: MyAlarm
     lateinit var textView : TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         getMydata()
+        val mStartServiceIntent = Intent(this, MyService::class.java)
+        startService(mStartServiceIntent)
         val btnClick : Button = findViewById(R.id.btn_click)
         textView = findViewById(R.id.tv_text)
-//
+//        alarmReceiver = MyAlarm()
+//        val repeatMessage = "tes1"
+//        alarmReceiver.setRepeatingAlarm(this, MyAlarm.TYPE_REPEATING,repeatMessage)
 //        btnClick.setOnClickListener{
 //
 //        }
